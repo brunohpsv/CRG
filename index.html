@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Câmara de Resolução Global - CRG | Arbitragem</title>
+    <title>Câmara de Resolução por Arbitragem - CRPA | Arbitragem</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,41 +20,41 @@
     
     <style>
         :root {
-            --primary-blue: #1E3A8A;
-            --secondary-blue: #0D9488;
-            --hover-blue: #0F766E;
-            --theme-dark: #343A40;
-            --theme-border: #DEE2E6;
-            --lighter-gray: #ADB5BD;
-            --secondary-gray: #F8F9FA;
+            --primary-red: #8B0000;
+            --secondary-red: #B22222;
+            --hover-red: #A52A2A;
+            --theme-dark: #1A1A1A;
+            --theme-border: #D1D5DB;
+            --lighter-gray: #9CA3AF;
+            --secondary-gray: #F9FAFB;
         }
         
         body {
             font-family: 'Inter', sans-serif;
         }
         
-        .bg-primaryBlue {
-            background-color: var(--primary-blue);
+        .bg-primaryRed {
+            background-color: var(--primary-red);
         }
         
-        .bg-secondaryBlue {
-            background-color: var(--secondary-blue);
+        .bg-secondaryRed {
+            background-color: var(--secondary-red);
         }
         
-        .bg-hoverBlue {
-            background-color: var(--hover-blue);
+        .bg-hoverRed {
+            background-color: var(--hover-red);
         }
         
         .bg-secondaryGray {
             background-color: var(--secondary-gray);
         }
         
-        .text-primaryBlue {
-            color: var(--primary-blue);
+        .text-primaryRed {
+            color: var(--primary-red);
         }
         
-        .text-secondaryBlue {
-            color: var(--secondary-blue);
+        .text-secondaryRed {
+            color: var(--secondary-red);
         }
         
         .text-themeDark {
@@ -77,8 +77,8 @@
             border-color: var(--lighter-gray);
         }
         
-        .border-secondaryBlue {
-            border-color: var(--secondary-blue);
+        .border-secondaryRed {
+            border-color: var(--secondary-red);
         }
         
         .w-container {
@@ -128,7 +128,7 @@
         .textarea-content h3 {
             font-size: 1.5rem;
             font-weight: 600;
-            color: var(--primary-blue);
+            color: var(--primary-red);
             margin-top: 1.5rem;
             margin-bottom: 1rem;
         }
@@ -136,7 +136,7 @@
         .textarea-content h4 {
             font-size: 1.25rem;
             font-weight: 600;
-            color: var(--primary-blue);
+            color: var(--primary-red);
             margin-top: 1.25rem;
             margin-bottom: 0.75rem;
         }
@@ -156,22 +156,53 @@
         }
         
         .bg-form {
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjMUUzQThBIi8+CjxwYXRoIGQ9Ik0wIDI1MEMxMDAgMjAwIDIwMCAzMDAgMzAwIDI1MEM0MDAgMjAwIDUwMCAzMDAgNjAwIDI1QzUwMCAxMDAgNDAwIDAgMzAwIDUwQzIwMCAxMDAgMTAwIDAgMCA1MFYyNTBaIiBmaWxsPSIjMEQ5NDg4IiBmaWxsLW9wYWNpdHk9IjAuMSIvPgo8cGF0aCBkPSJNMTIwMCAzNTBDMTEwMCA0MDAgMTAwMCAzMDAgOTAwIDM1QzgwMCA0MDAgNzAwIDMwMCA2MDAgMzUwQzcwMCA0MDAgODAwIDUwMCA5MDAgNDUwQzEwMDAgNDAwIDExMDAgNTAwIDEyMDAgNDUwVjM1MFoiIGZpbGw9IiMwRDk0ODgiIGZpbGwtb3BhY2l0eT0iMC4xIi8+Cjwvc3ZnPgo=');
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjOEIwMDAwIi8+CjxwYXRoIGQ9Ik0wIDI1MEMxMDAgMjAwIDIwMCAzMDAgMzAwIDI1MEM0MDAgMjAwIDUwMCAzMDAgNjAwIDI1QzUwMCAxMDAgNDAwIDAgMzAwIDUwQzIwMCAxMDAgMTAwIDAgMCA1MFYyNTBaIiBmaWxsPSIjQjIyMjIyIiBmaWxsLW9wYWNpdHk9IjAuMSIvPgo8cGF0aCBkPSJNMTIwMCAzNTBDMTEwMCA0MDAgMTAwMCAzMDAgOTAwIDM1QzgwMCA0MDAgNzAwIDMwMCA2MDAgMzUwQzcwMCA0MDAgODAwIDUwMCA5MDAgNDUwQzEwMDAgNDAwIDExMDAgNTAwIDEyMDAgNDUwVjM1MFoiIGZpbGw9IiNCMjIyMjIiIGZpbGwtb3BhY2l0eT0iMC4xIi8+Cjwvc3ZnPgo=');
         }
         
         .custom-ok-button {
-            background-color: var(--secondary-blue) !important;
+            background-color: var(--secondary-red) !important;
             color: white !important;
+        }
+        
+        .step-card {
+            transition: all 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sophisticated-border {
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        .taxas-info {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .taxas-info.expanded {
+            max-height: 1000px;
+        }
+        
+        .gratuidade-info {
+            background-color: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
         }
     </style>
 </head>
 
 <body class="bg-white text-gray-800" style="position: relative;">
     <!-- Header -->
-    <header class="bg-primaryBlue px-6 py-4 flex justify-between fixed w-full top-0 z-[9999]">
+    <header class="bg-primaryRed px-6 py-4 flex justify-between fixed w-full top-0 z-[9999] shadow-lg">
         <a href="/" class="xl:ml-[50px] 2xl:ml-[105px]">
-            <div class="text-white font-bold text-xl">CRG</div>
-            <div class="text-white text-sm">Câmara de Resolução Global</div>
+            <div class="text-white font-bold text-xl">CRPA</div>
+            <div class="text-white text-sm">Câmara de Resolução por Arbitragem</div>
         </a>
 
         <button id="mobileMenuToggle" class="md:hidden">
@@ -183,25 +214,25 @@
         </button>
 
         <!-- Menu desktop -->
-        <nav class="hidden bg-primaryBlue md:flex justify-between">
-            <ul class="flex items-center gap-4 text-white font-medium text-sm">
+        <nav class="hidden bg-primaryRed md:flex justify-between">
+            <ul class="flex items-center gap-6 text-white font-medium text-sm">
                 <li>
-                    <a href="#inicio" class="hover:text-secondaryBlue">Início</a>
+                    <a href="#inicio" class="hover:text-gray-200 transition-colors duration-300">Início</a>
                 </li>
                 <li>
-                    <a href="#sobre" class="hover:text-secondaryBlue">Sobre</a>
+                    <a href="#sobre" class="hover:text-gray-200 transition-colors duration-300">Sobre</a>
                 </li>
                 <li>
-                    <a href="#arbitragem" class="hover:text-secondaryBlue">Arbitragem</a>
+                    <a href="#arbitragem" class="hover:text-gray-200 transition-colors duration-300">Arbitragem</a>
                 </li>
                 <li>
-                    <a href="#arbitros" class="hover:text-secondaryBlue">Árbitros</a>
+                    <a href="#arbitros" class="hover:text-gray-200 transition-colors duration-300">Árbitros</a>
                 </li>
                 <li>
-                    <a href="#regulamento" class="hover:text-secondaryBlue">Regulamento</a>
+                    <a href="#regulamento" class="hover:text-gray-200 transition-colors duration-300">Regulamento</a>
                 </li>
                 <li>
-                    <a href="#contato" class="hover:text-secondaryBlue">Contato</a>
+                    <a href="#contato" class="hover:text-gray-200 transition-colors duration-300">Contato</a>
                 </li>
             </ul>
         </nav>
@@ -210,7 +241,7 @@
     <!-- Menu Mobile -->
     <div id="mobileMenu" class="hidden fixed top-0 left-0 w-full h-screen bg-white overflow-y-auto z-[9999]">
         <div class="p-4 flex justify-between bg-secondaryGray">
-            <div class="text-primaryBlue uppercase font-bold py-3">Menu</div>
+            <div class="text-primaryRed uppercase font-bold py-3">Menu</div>
             <button id="mobileMenuClose">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -220,22 +251,22 @@
         </div>
         <nav class="px-4 py-6 border-b-2 border-themeBorder mb-6">
             <div class="flex flex-col gap-4">
-                <a class="flex justify-center items-center text-primaryBlue font-bold text-center h-14" href="#inicio">
+                <a class="flex justify-center items-center text-primaryRed font-bold text-center h-14" href="#inicio">
                     Início
                 </a>
-                <a class="flex justify-center items-center text-primaryBlue font-bold text-center h-14" href="#sobre">
+                <a class="flex justify-center items-center text-primaryRed font-bold text-center h-14" href="#sobre">
                     Sobre
                 </a>
-                <a class="flex justify-center items-center text-primaryBlue font-bold text-center h-14" href="#arbitragem">
+                <a class="flex justify-center items-center text-primaryRed font-bold text-center h-14" href="#arbitragem">
                     Arbitragem
                 </a>
-                <a class="flex justify-center items-center text-primaryBlue font-bold text-center h-14" href="#arbitros">
+                <a class="flex justify-center items-center text-primaryRed font-bold text-center h-14" href="#arbitros">
                     Árbitros
                 </a>
-                <a class="flex justify-center items-center text-primaryBlue font-bold text-center h-14" href="#regulamento">
+                <a class="flex justify-center items-center text-primaryRed font-bold text-center h-14" href="#regulamento">
                     Regulamento
                 </a>
-                <a class="flex justify-center items-center text-primaryBlue font-bold text-center h-14" href="#contato">
+                <a class="flex justify-center items-center text-primaryRed font-bold text-center h-14" href="#contato">
                     Contato
                 </a>
             </div>
@@ -245,12 +276,12 @@
     <!-- Main Content -->
     <main class="mt-[3.875rem]" id="inicio">
         <!-- Hero Section -->
-        <section class="bg-primaryBlue py-20 px-4">
+        <section class="bg-primaryRed py-20 px-4">
             <div class="w-container flex flex-col items-center text-center text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Câmara de Resolução Global</h1>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Câmara de Resolução por Arbitragem</h1>
                 <p class="text-xl md:text-2xl mb-8 max-w-3xl">Especializada em Arbitragem para resolução eficiente de conflitos empresariais e comerciais</p>
                 <div class="flex flex-col md:flex-row gap-4">
-                    <a href="#contato" class="bg-secondaryBlue hover:bg-hoverBlue text-white font-semibold py-3 px-8 rounded-2xl transition duration-300">
+                    <a href="#contato" class="bg-secondaryRed hover:bg-hoverRed text-white font-semibold py-3 px-8 rounded-2xl transition duration-300 shadow-lg">
                         Solicitar Contato
                     </a>
                     <a href="#arbitragem" class="bg-transparent border-2 border-white hover:bg-white/10 text-white font-semibold py-3 px-8 rounded-2xl transition duration-300">
@@ -263,12 +294,12 @@
         <!-- Sobre Section -->
         <section id="sobre" class="py-16 px-4">
             <div class="w-container">
-                <h2 class="text-3xl md:text-4xl font-bold text-primaryBlue text-center mb-12">Sobre a CRG</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-primaryRed text-center mb-12">Sobre a CRPA</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 class="text-2xl font-semibold text-primaryBlue mb-4">Nossa Missão</h3>
+                        <h3 class="text-2xl font-semibold text-primaryRed mb-4">Nossa Missão</h3>
                         <p class="text-lg text-themeDark mb-6">
-                            A Câmara de Resolução Global (CRG) é uma instituição especializada em arbitragem, 
+                            A Câmara de Resolução por Arbitragem (CRPA) é uma instituição especializada em arbitragem, 
                             dedicada a oferecer soluções eficazes e especializadas para a resolução de conflitos 
                             empresariais e comerciais.
                         </p>
@@ -278,26 +309,26 @@
                         </p>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold text-primaryBlue mb-4">Nossos Valores</h3>
+                        <h3 class="text-2xl font-semibold text-primaryRed mb-4">Nossos Valores</h3>
                         <ul class="text-lg text-themeDark space-y-3">
                             <li class="flex items-start">
-                                <span class="text-secondaryBlue mr-2">✓</span>
+                                <span class="text-secondaryRed mr-2">✓</span>
                                 <span>Ética e transparência em todos os processos</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-secondaryBlue mr-2">✓</span>
+                                <span class="text-secondaryRed mr-2">✓</span>
                                 <span>Especialização técnica dos árbitros</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-secondaryBlue mr-2">✓</span>
+                                <span class="text-secondaryRed mr-2">✓</span>
                                 <span>Eficiência e celeridade processual</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-secondaryBlue mr-2">✓</span>
+                                <span class="text-secondaryRed mr-2">✓</span>
                                 <span>Confidencialidade e segurança jurídica</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-secondaryBlue mr-2">✓</span>
+                                <span class="text-secondaryRed mr-2">✓</span>
                                 <span>Compromisso com resultados justos e equilibrados</span>
                             </li>
                         </ul>
@@ -309,13 +340,13 @@
         <!-- Arbitragem Section -->
         <section id="arbitragem" class="py-16 px-4 bg-secondaryGray">
             <div class="w-container">
-                <h2 class="text-3xl md:text-4xl font-bold text-primaryBlue text-center mb-12">Arbitragem</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-primaryRed text-center mb-12">Arbitragem</h2>
                 
                 <!-- Navigation through tabs -->
                 <div class="mb-8 border-b border-b-lighterGray">
                     <ul class="flex text-sm font-medium text-center gap-4 overflow-x-auto" id="default-tab"
                         data-tabs-toggle="#default-tab-content"
-                        data-tabs-active-classes="font-bold text-primaryBlue border-b-2 border-primaryBlue"
+                        data-tabs-active-classes="font-bold text-primaryRed border-b-2 border-primaryRed"
                         data-tabs-inactive-classes="font-normal text-lightGray" role="tablist">
                         <li role="presentation" class="flex-shrink-0">
                             <button
@@ -348,7 +379,7 @@
                     <!-- O que é? -->
                     <div class="" id="what" role="tabpanel" aria-labelledby="what-tab">
                         <div class="mb-6 md:mb-10">
-                            <h2 class="text-2xl md:text-custom-h1 font-semibold text-primaryBlue">
+                            <h2 class="text-2xl md:text-custom-h1 font-semibold text-primaryRed">
                                 O que é a arbitragem?
                             </h2>
                         </div>
@@ -359,211 +390,170 @@
                             <p>A arbitragem é composta por etapas essenciais que garantem uma decisão justa e eficiente para os conflitos, são elas:</p>
                         </div>
                         <div>
-                            <!-- Passos -->
-                            <div class="h-[31.75rem] md:h-auto bg-gradient-to-r from-primaryBlue to-secondaryBlue md:rounded-3xl flex flex-col justify-center md:mb-10">
-                                <div class="py-10 px-6 md:w-[50%]">
-                                    <div id="carousel-passos" class="relative w-full" data-carousel="slide">
-                                        <!-- Carousel wrapper -->
-                                        <div class="relative h-80 overflow-hidden rounded-lg">
-                                            <!-- Itens -->
-                                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                                <div class="flex justify-center">
-                                                    <div class="w-80 h-80 bg-white p-6 rounded-3xl flex flex-col gap-4">
-                                                        <div class="text-2xl text-[#CED4DA] uppercase font-semibold">
-                                                            Passo
-                                                        </div>
-                                                        <!-- Numeração -->
-                                                        <div class="flex gap-[10px] text-lg font-medium">
-                                                            <span class="rounded-[50%] text-primaryBlue bg-primaryBlue text-white w-8 h-8 flex justify-center items-center">
-                                                                1
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                2
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                3
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                4
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                5
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <div class="text-themeDark font-semibold mb-[10px]">
-                                                                Escolha dos árbitros
-                                                            </div>
-                                                            <div class="text-themeDark text-sm font-medium">
-                                                                As partes selecionam um ou mais árbitros especializados na área do conflito ou profissionais com experiência em arbitragem.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                                <div class="flex justify-center">
-                                                    <div class="w-80 h-80 bg-white p-6 rounded-3xl flex flex-col gap-4">
-                                                        <div class="text-2xl text-[#CED4DA] uppercase font-semibold">
-                                                            Passo
-                                                        </div>
-                                                        <!-- Numeração -->
-                                                        <div class="flex gap-[10px] text-lg font-medium">
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                1
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue bg-primaryBlue text-white w-8 h-8 flex justify-center items-center">
-                                                                2
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                3
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                4
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                5
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <div class="text-themeDark font-semibold mb-[10px]">
-                                                                Procedimentos arbitrais
-                                                            </div>
-                                                            <div class="text-themeDark text-sm font-medium">
-                                                                Inicia-se formalmente a apresentação de provas e argumentos, similares ao que ocorre em um tribunal de justiça.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                                <div class="flex justify-center">
-                                                    <div class="w-80 h-80 bg-white p-6 rounded-3xl flex flex-col gap-4">
-                                                        <div class="text-2xl text-[#CED4DA] uppercase font-semibold">
-                                                            Passo
-                                                        </div>
-                                                        <!-- Numeração -->
-                                                        <div class="flex gap-[10px] text-lg font-medium">
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                1
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                2
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue bg-primaryBlue text-white w-8 h-8 flex justify-center items-center">
-                                                                3
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                4
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                5
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <div class="text-themeDark font-semibold mb-[10px]">
-                                                                Audiências
-                                                            </div>
-                                                            <div class="text-themeDark text-sm font-medium">
-                                                                Os árbitros chamam as partes para apresentarem suas evidências e argumentos finais para entender melhor a situação.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                                <div class="flex justify-center">
-                                                    <div class="w-80 h-80 bg-white p-6 rounded-3xl flex flex-col gap-4">
-                                                        <div class="text-2xl text-[#CED4DA] uppercase font-semibold">
-                                                            Passo
-                                                        </div>
-                                                        <!-- Numeração -->
-                                                        <div class="flex gap-[10px] text-lg font-medium">
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                1
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                2
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                3
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue bg-primaryBlue text-white w-8 h-8 flex justify-center items-center">
-                                                                4
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                5
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <div class="text-themeDark font-semibold mb-[10px]">
-                                                                Decisão
-                                                            </div>
-                                                            <div class="text-themeDark text-sm font-medium">
-                                                                Após as audiências e análise das provas, os árbitros emitem uma decisão chamada sentença arbitral.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                                <div class="flex justify-center">
-                                                    <div class="w-80 h-80 bg-white p-6 rounded-3xl flex flex-col gap-4">
-                                                        <div class="text-2xl text-[#CED4DA] uppercase font-semibold">
-                                                            Passo
-                                                        </div>
-                                                        <!-- Numeração -->
-                                                        <div class="flex gap-[10px] text-lg font-medium">
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                1
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                2
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                3
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue w-8 h-8 flex justify-center items-center">
-                                                                4
-                                                            </span>
-                                                            <span class="rounded-[50%] text-primaryBlue bg-primaryBlue text-white w-8 h-8 flex justify-center items-center">
-                                                                5
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <div class="text-themeDark font-semibold mb-[10px]">
-                                                                Cumprimento
-                                                            </div>
-                                                            <div class="text-themeDark text-sm font-medium">
-                                                                Caso uma das partes não cumpra a decisão, o processo deve ser executado no judiciário tradicional.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <!-- Passos como cards estáticos -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
+                                <!-- Passo 1 -->
+                                <div class="step-card bg-white p-6 rounded-2xl flex flex-col gap-4 sophisticated-border">
+                                    <div class="text-2xl text-gray-300 uppercase font-semibold">
+                                        Passo
+                                    </div>
+                                    <!-- Numeração -->
+                                    <div class="flex gap-[10px] text-lg font-medium">
+                                        <span class="rounded-[50%] text-primaryRed bg-primaryRed text-white w-8 h-8 flex justify-center items-center">
+                                            1
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            2
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            3
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            4
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            5
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div class="text-themeDark font-semibold mb-[10px]">
+                                            Escolha dos árbitros
                                         </div>
-
-                                        <!-- Slider controls -->
-                                        <button type="button"
-                                            class="absolute top-[60%] custom-left md:top-0 md:start-0 z-30 flex items-center justify-center h-full cursor-pointer group focus:outline-none"
-                                            data-carousel-prev>
-                                            <span class="group-focus:outline-none">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <polyline points="15 18 9 12 15 6"></polyline>
-                                                </svg>
-                                                <span class="sr-only">Previous</span>
-                                            </span>
-                                        </button>
-                                        <button type="button"
-                                            class="absolute top-[60%] custom-right md:top-0 md:end-0 z-30 flex items-center justify-center h-full cursor-pointer group focus:outline-none"
-                                            data-carousel-next>
-                                            <span class="group-focus:outline-none">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                                </svg>
-                                                <span class="sr-only">Next</span>
-                                            </span>
-                                        </button>
+                                        <div class="text-themeDark text-sm font-medium">
+                                            As partes selecionam um ou mais árbitros especializados na área do conflito ou profissionais com experiência em arbitragem.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Passo 2 -->
+                                <div class="step-card bg-white p-6 rounded-2xl flex flex-col gap-4 sophisticated-border">
+                                    <div class="text-2xl text-gray-300 uppercase font-semibold">
+                                        Passo
+                                    </div>
+                                    <!-- Numeração -->
+                                    <div class="flex gap-[10px] text-lg font-medium">
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            1
+                                        </span>
+                                        <span class="rounded-[50%] text-primaryRed bg-primaryRed text-white w-8 h-8 flex justify-center items-center">
+                                            2
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            3
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            4
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            5
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div class="text-themeDark font-semibold mb-[10px]">
+                                            Procedimentos arbitrais
+                                        </div>
+                                        <div class="text-themeDark text-sm font-medium">
+                                            Inicia-se formalmente a apresentação de provas e argumentos, similares ao que ocorre em um tribunal de justiça.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Passo 3 -->
+                                <div class="step-card bg-white p-6 rounded-2xl flex flex-col gap-4 sophisticated-border">
+                                    <div class="text-2xl text-gray-300 uppercase font-semibold">
+                                        Passo
+                                    </div>
+                                    <!-- Numeração -->
+                                    <div class="flex gap-[10px] text-lg font-medium">
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            1
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            2
+                                        </span>
+                                        <span class="rounded-[50%] text-primaryRed bg-primaryRed text-white w-8 h-8 flex justify-center items-center">
+                                            3
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            4
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            5
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div class="text-themeDark font-semibold mb-[10px]">
+                                            Audiências
+                                        </div>
+                                        <div class="text-themeDark text-sm font-medium">
+                                            Os árbitros chamam as partes para apresentarem suas evidências e argumentos finais para entender melhor a situação.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Passo 4 -->
+                                <div class="step-card bg-white p-6 rounded-2xl flex flex-col gap-4 sophisticated-border">
+                                    <div class="text-2xl text-gray-300 uppercase font-semibold">
+                                        Passo
+                                    </div>
+                                    <!-- Numeração -->
+                                    <div class="flex gap-[10px] text-lg font-medium">
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            1
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            2
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            3
+                                        </span>
+                                        <span class="rounded-[50%] text-primaryRed bg-primaryRed text-white w-8 h-8 flex justify-center items-center">
+                                            4
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            5
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div class="text-themeDark font-semibold mb-[10px]">
+                                            Decisão
+                                        </div>
+                                        <div class="text-themeDark text-sm font-medium">
+                                            Após as audiências e análise das provas, os árbitros emitem uma decisão chamada sentença arbitral.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Passo 5 -->
+                                <div class="step-card bg-white p-6 rounded-2xl flex flex-col gap-4 sophisticated-border">
+                                    <div class="text-2xl text-gray-300 uppercase font-semibold">
+                                        Passo
+                                    </div>
+                                    <!-- Numeração -->
+                                    <div class="flex gap-[10px] text-lg font-medium">
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            1
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            2
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            3
+                                        </span>
+                                        <span class="rounded-[50%] text-gray-400 w-8 h-8 flex justify-center items-center">
+                                            4
+                                        </span>
+                                        <span class="rounded-[50%] text-primaryRed bg-primaryRed text-white w-8 h-8 flex justify-center items-center">
+                                            5
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div class="text-themeDark font-semibold mb-[10px]">
+                                            Cumprimento
+                                        </div>
+                                        <div class="text-themeDark text-sm font-medium">
+                                            Caso uma das partes não cumpra a decisão, o processo deve ser executado no judiciário tradicional.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -572,17 +562,17 @@
                     
                     <!-- Tabela e calculadora -->
                     <div class="hidden" id="table-calculator" role="tabpanel" aria-labelledby="table-calculator-tab">
-                        <h2 class="w-full text-2xl md:text-custom-h1 font-semibold text-primaryBlue leading-9 md:mb-10">
+                        <h2 class="w-full text-2xl md:text-custom-h1 font-semibold text-primaryRed leading-9 md:mb-10">
                             Calculadora & Tabela
                         </h2>
                         <div class="textarea-content arbitragem md:mb-10">
-                            <p>Para auxiliar você na compreensão dos custos envolvidos em um processo de arbitragem, a CRG desenvolveu esta calculadora prática e fácil de usar. Com ela, você poderá estimar os honorários dos árbitros, taxas administrativas e outras despesas relacionadas ao processo.</p>
+                            <p>Para auxiliar você na compreensão dos custos envolvidos em um processo de arbitragem, a CRPA desenvolveu esta calculadora prática e fácil de usar. Com ela, você poderá estimar os honorários dos árbitros, taxas administrativas e outras despesas relacionadas ao processo.</p>
                             <p>Queremos te ajudar a planejar e ter uma visão clara dos investimentos necessários para o método de arbitragem!</p>
                         </div>
-                        <div class="bg-primaryBlue p-6 md:rounded-2xl w-full md:mb-2">
+                        <div class="bg-primaryRed p-6 md:rounded-2xl w-full md:mb-2">
                             <div class="flex flex-col md:grid grid-cols-3 gap-2 md:gap-6">
                                 <!-- Valor da demanda -->
-                                <div class="flex-1 flex flex-col justify-center border border-solid border-secondaryBlue rounded-2xl p-4">
+                                <div class="flex-1 flex flex-col justify-center border border-solid border-secondaryRed rounded-2xl p-4">
                                     <div class="font-semibold text-2xl text-secondaryGray leading-7 mb-2 md:mb-6">
                                         Calculadora
                                     </div>
@@ -590,7 +580,7 @@
                                         Valor da demanda
                                     </div>
                                     <input id="valor" name="valor" type="text" placeholder="R$ 0" class="px-4 py-2 rounded-2xl w-full my-2 md:my-4">
-                                    <button id="calcular-taxas-botao" type="submit" class="block rounded-2xl bg-secondaryBlue text-white px-8 py-4 font-semibold md:w-fit">
+                                    <button id="calcular-taxas-botao" type="submit" class="block rounded-2xl bg-secondaryRed text-white px-8 py-4 font-semibold md:w-fit hover:bg-hoverRed transition-colors duration-300">
                                         Calcular
                                     </button>
                                 </div>
@@ -600,7 +590,7 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                             <path
                                                 d="M22.8113 10.9404L21.3113 9.4404C21.0569 9.18629 20.7197 9.03202 20.361 9.00569C20.0024 8.97936 19.6463 9.08273 19.3575 9.29696L14.7038 4.64321C14.9181 4.35453 15.0216 3.99847 14.9955 3.63986C14.9693 3.28126 14.8152 2.94398 14.5613 2.68946L13.0613 1.18946C12.922 1.05014 12.7566 0.939617 12.5746 0.864214C12.3926 0.78881 12.1975 0.75 12.0005 0.75C11.8035 0.75 11.6084 0.78881 11.4264 0.864214C11.2444 0.939617 11.079 1.05014 10.9397 1.18946L4.93971 7.18946C4.80038 7.32875 4.68987 7.49413 4.61446 7.67614C4.53906 7.85815 4.50025 8.05323 4.50025 8.25024C4.50025 8.44725 4.53906 8.64234 4.61446 8.82435C4.68987 9.00636 4.80038 9.17173 4.93971 9.31102L6.43971 10.811C6.69417 11.0647 7.03127 11.2187 7.38966 11.2448C7.74805 11.271 8.10392 11.1676 8.39252 10.9535L9.06471 11.6257L2.93533 17.7551C2.52812 18.2004 2.30838 18.7857 2.32188 19.389C2.33537 19.9923 2.58105 20.5672 3.00776 20.9939C3.43447 21.4206 4.00933 21.6663 4.61264 21.6798C5.21596 21.6933 5.80122 21.4735 6.24658 21.0663L12.375 14.937L13.0472 15.6082C12.8329 15.8969 12.7293 16.253 12.7555 16.6116C12.7816 16.9702 12.9357 17.3074 13.1897 17.562L14.6897 19.062C14.829 19.2013 14.9944 19.3118 15.1764 19.3872C15.3584 19.4626 15.5535 19.5014 15.7505 19.5014C15.9475 19.5014 16.1426 19.4626 16.3246 19.3872C16.5066 19.3118 16.672 19.2013 16.8113 19.062L22.8113 13.062C22.9506 12.9227 23.0611 12.7573 23.1365 12.5753C23.2119 12.3933 23.2507 12.1982 23.2507 12.0012C23.2507 11.8042 23.2119 11.6091 23.1365 11.4271C23.0611 11.2451 22.9506 11.0797 22.8113 10.9404ZM7.50002 9.75071L6.00002 8.25071L12 2.25071L13.5 3.75071L7.50002 9.75071ZM5.18627 20.0051C5.02818 20.1622 4.81433 20.2504 4.59143 20.2504C4.36852 20.2504 4.15467 20.1622 3.99658 20.0051C3.83972 19.847 3.75169 19.6334 3.75169 19.4107C3.75169 19.188 3.83972 18.9744 3.99658 18.8163L10.125 12.687L11.3147 13.8757L5.18627 20.0051ZM9.46877 9.90634L13.6556 5.71946L18.2813 10.3451L14.0953 14.532L9.46877 9.90634ZM15.75 18.0007L14.25 16.5007L14.625 16.1257L19.875 10.8757L20.25 10.5007L21.75 12.0007L15.75 18.0007Z"
-                                                fill="#0d9488" />
+                                                fill="#B22222" />
                                         </svg>
                                         <div class="text-secondaryGray font-bold text-lg">
                                             Árbitro Único
@@ -621,10 +611,10 @@
                                         <div class="font-bold text-lg"><span id="arbitro-valor-arbitro">-</span></div>
                                     </div>
                                     <div class="text-sm flex justify-between p-4 bg-white rounded-b-2xl">
-                                        <div class="font-bold text-secondaryBlue text-lg">
+                                        <div class="font-bold text-secondaryRed text-lg">
                                             Total
                                         </div>
-                                        <div class="font-bold text-primaryBlue text-lg">
+                                        <div class="font-bold text-primaryRed text-lg">
                                             <span id="arbitro-total">-</span>
                                         </div>
                                     </div>
@@ -635,7 +625,7 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                             <path
                                                 d="M22.8113 10.9404L21.3113 9.4404C21.0569 9.18629 20.7197 9.03202 20.361 9.00569C20.0024 8.97936 19.6463 9.08273 19.3575 9.29696L14.7038 4.64321C14.9181 4.35453 15.0216 3.99847 14.9955 3.63986C14.9693 3.28126 14.8152 2.94398 14.5613 2.68946L13.0613 1.18946C12.922 1.05014 12.7566 0.939617 12.5746 0.864214C12.3926 0.78881 12.1975 0.75 12.0005 0.75C11.8035 0.75 11.6084 0.78881 11.4264 0.864214C11.2444 0.939617 11.079 1.05014 10.9397 1.18946L4.93971 7.18946C4.80038 7.32875 4.68987 7.49413 4.61446 7.67614C4.53906 7.85815 4.50025 8.05323 4.50025 8.25024C4.50025 8.44725 4.53906 8.64234 4.61446 8.82435C4.68987 9.00636 4.80038 9.17173 4.93971 9.31102L6.43971 10.811C6.69417 11.0647 7.03127 11.2187 7.38966 11.2448C7.74805 11.271 8.10392 11.1676 8.39252 10.9535L9.06471 11.6257L2.93533 17.7551C2.52812 18.2004 2.30838 18.7857 2.32188 19.389C2.33537 19.9923 2.58105 20.5672 3.00776 20.9939C3.43447 21.4206 4.00933 21.6663 4.61264 21.6798C5.21596 21.6933 5.80122 21.4735 6.24658 21.0663L12.375 14.937L13.0472 15.6082C12.8329 15.8969 12.7293 16.253 12.7555 16.6116C12.7816 16.9702 12.9357 17.3074 13.1897 17.562L14.6897 19.062C14.829 19.2013 14.9944 19.3118 15.1764 19.3872C15.3584 19.4626 15.5535 19.5014 15.7505 19.5014C15.9475 19.5014 16.1426 19.4626 16.3246 19.3872C16.5066 19.3118 16.672 19.2013 16.8113 19.062L22.8113 13.062C22.9506 12.9227 23.0611 12.7573 23.1365 12.5753C23.2119 12.3933 23.2507 12.1982 23.2507 12.0012C23.2507 11.8042 23.2119 11.6091 23.1365 11.4271C23.0611 11.2451 22.9506 11.0797 22.8113 10.9404ZM7.50002 9.75071L6.00002 8.25071L12 2.25071L13.5 3.75071L7.50002 9.75071ZM5.18627 20.0051C5.02818 20.1622 4.81433 20.2504 4.59143 20.2504C4.36852 20.2504 4.15467 20.1622 3.99658 20.0051C3.83972 19.847 3.75169 19.6334 3.75169 19.4107C3.75169 19.188 3.83972 18.9744 3.99658 18.8163L10.125 12.687L11.3147 13.8757L5.18627 20.0051ZM9.46877 9.90634L13.6556 5.71946L18.2813 10.3451L14.0953 14.532L9.46877 9.90634ZM15.75 18.0007L14.25 16.5007L14.625 16.1257L19.875 10.8757L20.25 10.5007L21.75 12.0007L15.75 18.0007Z"
-                                                fill="#0d9488" />
+                                                fill="#B22222" />
                                         </svg>
                                         <div class="text-secondaryGray font-bold text-lg">
                                             Tribunal Arbitral
@@ -656,32 +646,196 @@
                                         <div class="font-bold text-lg"><span id="tribunal-valor-arbitro">-</span></div>
                                     </div>
                                     <div class="text-sm flex justify-between p-4 bg-white rounded-b-2xl">
-                                        <div class="font-bold text-secondaryBlue text-lg">
+                                        <div class="font-bold text-secondaryRed text-lg">
                                             Total
                                         </div>
-                                        <div class="font-bold text-primaryBlue text-lg">
+                                        <div class="font-bold text-primaryRed text-lg">
                                             <span id="tribunal-total">-</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <p class="text-secondaryGray text-sm mt-4">
-                                *Os valores são estimativas baseadas na tabela de custas da CRG e podem sofrer ajustes conforme a complexidade do caso.
+                                *Os valores são estimativas baseadas na tabela de custas da CRPA e podem sofrer ajustes conforme a complexidade do caso.
                             </p>
+                        </div>
+                        
+                        <!-- Informações sobre taxas (inicialmente oculto) -->
+                        <div id="taxas-info" class="taxas-info mt-8 bg-white p-6 rounded-2xl shadow-large">
+                            <div class="flex justify-between items-center mb-4 cursor-pointer" id="taxas-toggle">
+                                <h3 class="text-xl font-bold text-primaryRed">Informações sobre as Taxas de Arbitragem</h3>
+                                <svg id="taxas-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform transition-transform">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div id="taxas-content" class="textarea-content">
+                                <p><strong>Tabela de Custas de Arbitragem</strong></p>
+                                <p>Conforme disposto no Regulamento de Arbitragem da CRPA, os custos, despesas e honorários são regulados nos termos que seguem e se constituem de:</p>
+                                <ul>
+                                    <li>a) Taxa de Registro;</li>
+                                    <li>b) Taxa de Administração;</li>
+                                    <li>c) Honorários do(s) Árbitro(s);</li>
+                                    <li>d) Gastos de viagem e outras despesas realizadas pelo Árbitro ou Tribunal Arbitral, pela Secretaria CRPA ou peritos e testemunhas;</li>
+                                    <li>e) Honorários periciais, bem como qualquer outra despesa decorrente de ato ou assistência requerida pelo Árbitro ou Tribunal Arbitral.</li>
+                                </ul>
+                                
+                                <div class="gratuidade-info">
+                                    <h4 class="font-bold text-primaryRed">Termo de Gratuidade Administrativa</h4>
+                                    <p>Para valores de demanda abaixo de R$ 8.000,00, é possível solicitar o <strong>Termo de Gratuidade Administrativa</strong>. Neste caso, o requerente pagará apenas:</p>
+                                    <ul>
+                                        <li>Taxa de Registro: conforme tabela (1% do valor da demanda)</li>
+                                        <li>Honorários do Árbitro: R$ 500,00</li>
+                                        <li>Taxa de Administração: <strong>Isenta</strong></li>
+                                    </ul>
+                                </div>
+                                
+                                <h4>1. Taxa de registro</h4>
+                                <p>1.1 A taxa de registro é o valor a ser pago para que seja instaurado o procedimento.</p>
+                                <p>1.2 O requerimento inicial de Arbitragem deverá ser acompanhado do comprovante de pagamento da taxa de registro para a CRPA.</p>
+                                <p>1.3 A taxa de registro tem caráter não reembolsável</p>
+                                <p>1.4 Ao protocolar Solicitação de Arbitragem ou apresentar pedido contraposto, a parte interessada deverá efetuar o pagamento de Taxa de Registro nos seguintes valores:</p>
+                                
+                                <table class="w-full border-collapse border border-gray-300 my-4">
+                                    <thead>
+                                        <tr class="bg-gray-100">
+                                            <th class="border border-gray-300 p-2 text-left">Valor da Demanda</th>
+                                            <th class="border border-gray-300 p-2 text-left">Taxa de Registro</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">Até R$ 150.000,00</td>
+                                            <td class="border border-gray-300 p-2">1% do valor da demanda</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">De R$ 150.000,01 a R$ 500.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 4.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">De R$ 500.000,01 a R$ 1.000.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 5.500,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">Acima de R$ 1.000.000,01</td>
+                                            <td class="border border-gray-300 p-2">R$ 6.500,00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <h4>2. Taxa de administração</h4>
+                                <p>2.1 A taxa de administração é cobrada após a instauração do procedimento de Arbitragem, e será rateada igualmente entre as partes, salvo acordo em contrário.</p>
+                                <p>2.2 A taxa de administração corresponde a custo de todo o procedimento de Arbitragem.</p>
+                                
+                                <table class="w-full border-collapse border border-gray-300 my-4">
+                                    <thead>
+                                        <tr class="bg-gray-100">
+                                            <th class="border border-gray-300 p-2 text-left">Valor da Demanda</th>
+                                            <th class="border border-gray-300 p-2 text-left">Taxa de Administração</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">Até R$ 150.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 1 salário mínimo</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">De R$ 150.000,01 a R$ 300.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 3 salários mínimos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">De R$ 300.000,01 a R$ 500.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 5 salários mínimos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">De R$ 500.000,01 a R$ 1.000.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 8 salários mínimos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">De R$ 1.000.000,01 a R$ 5.000.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 10 salários mínimos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">De R$ 5.000.000,01 a R$ 10.000.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 12 salários mínimos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">Acima de R$ 10.000.000,01</td>
+                                            <td class="border border-gray-300 p-2">Serão definidos pelo Diretor Técnico</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <p>2.3 Havendo Reconvenção, cada parte pagará integralmente a Taxa de Administração correspondente ao valor do seu pleito.</p>
+                                
+                                <h4>3. Honorários dos Árbitros</h4>
+                                <p>3.1 Os honorários do(s) árbitro(s) serão adiantados em igual proporção (50% para cada um) pelos polos.</p>
+                                <p>3.1.1 Havendo pedido contraposto, cada parte adiantará integralmente os valores de Honorários de Árbitro correspondentes aos seus pleitos.</p>
+                                <p>3.2 Os Honorários de Árbitro serão individualmente sugeridos com base na seguinte tabela, para Árbitro e membros do Tribunal Arbitral:</p>
+                                
+                                <table class="w-full border-collapse border border-gray-300 my-4">
+                                    <thead>
+                                        <tr class="bg-gray-100">
+                                            <th class="border border-gray-300 p-2 text-left">Valor da Demanda</th>
+                                            <th class="border border-gray-300 p-2 text-left">Honorários do árbitro</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">Até R$ 150.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 4.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">De R$ 150.000,01 a R$ 500.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 6.250,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">De R$ 500.000,01 a R$ 1.000.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 12.500,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">De R$ 1.000.000,01 a R$ 5.000.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 18.750,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">De R$ 5.000.000,01 a R$ 10.000.000,00</td>
+                                            <td class="border border-gray-300 p-2">R$ 25.250,00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <p>3.2.1 Havendo pedido contraposto, cada parte adiantará integralmente os valores de Honorários de Árbitro correspondentes aos seus pleitos.</p>
+                                <p>3.3 A Taxa de Registro para a Arbitragem de Emergência será fixa em R$ 2.500,00 (dois mil e quinhentos reais), independentemente do valor da causa.</p>
+                                <p>3.4 A Taxa de Administração e Honorários de Árbitro para a Arbitragem de Emergência será de 30% (trinta por cento) do valor previsto na tabela da Taxa de Administração e na Tabela de honorários do Árbitro, conforme o valor da causa, não sendo inferior ao valor integral da faixa inicial das respectivos tabelas.</p>
+                                <p>3.5 Caso a Arbitragem de Emergência seja seguida de procedimento arbitral:</p>
+                                <ul>
+                                    <li>a) não será devida nova Taxa de Registro pelo Requerente da arbitragem de emergência, com exceção de eventual pedido contraposto;</li>
+                                    <li>b) a Taxa de Administração paga no procedimento de emergência será compensada.</li>
+                                </ul>
+                                
+                                <h4>4. Outras custas eventuais</h4>
+                                <p>4.1 Todas as demais despesas necessárias ao desenvolvimento dos procedimentos, tais como periciais, viagens, entre outras, serão pagas pela parte que solicitou a diligência que originou a despesa, sendo que, na hipótese de diligência sugerida pelo Árbitro ou Tribunal Arbitral, serão rateadas igualmente entre as partes.</p>
+                                <p>4.2 Se, no curso do procedimento, verificar-se que o valor econômico de litígio informado pelas partes é inferior ao valor econômico real apurado com base nos elementos produzidos durante o procedimento, a CRPA procederá à respectiva correção, devendo as partes, se for o caso, complementar o valor inicialmente depositado a título de taxa de administração e honorários no prazo definido no regulamento de Arbitragem da CRPA, a contar do recebimento do comunicado.</p>
+                                
+                                <h4>5. Valor da causa</h4>
+                                <p>5.1 Para causas em que o valor do conflito seja indeterminado, inestimável, ou houver divergência, o Diretor Técnico da CRPA fixará o valor, para fins de cálculo de taxa de registro, taxa de administração e honorários do árbitro, levando em consideração a complexidade da matéria e outras circunstâncias que julgar pertinente.</p>
+                                
+                                <h4>6. Dos Descontos</h4>
+                                <p>Todos os associados que pagam uma parcela mensal de R$ 150,00, tem cerca de 30% de descontos cumulados em todas as taxas.</p>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Vantagens -->
                     <div class="hidden" id="advantages" role="tabpanel" aria-labelledby="advantages-tab">
-                        <h2 class="w-full text-2xl md:text-custom-h1 font-semibold text-primaryBlue leading-9 md:mb-10">
+                        <h2 class="w-full text-2xl md:text-custom-h1 font-semibold text-primaryRed leading-9 md:mb-10">
                             Vantagens da Arbitragem
                         </h2>
                         <div class="textarea-content arbitragem md:mb-10">
                             <p>Ao escolher a arbitragem para a resolução do seu conflito, seja de origem trabalhista ou empresarial, você tem como vantagens:</p>
                         </div>
                         <div class="flex flex-col gap-6 md:grid grid-cols-3 md:gap-6">
-                            <div class="bg-primaryBlue p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F8F9FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <div class="bg-primaryRed p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3 step-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="9" cy="7" r="4"></circle>
                                     <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -691,8 +845,8 @@
                                     Conhecimento especializado dos Árbitros
                                 </div>
                             </div>
-                            <div class="bg-primaryBlue p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F8F9FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <div class="bg-primaryRed p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3 step-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <polyline points="12 6 12 12 16 14"></polyline>
                                 </svg>
@@ -700,24 +854,24 @@
                                     Rapidez e menos formalidade nos processos
                                 </div>
                             </div>
-                            <div class="bg-primaryBlue p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F8F9FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <div class="bg-primaryRed p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3 step-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
                                 </svg>
                                 <div class="font-medium text-secondaryGray md:text-center text-lg">
                                     Decisão segura e definitiva
                                 </div>
                             </div>
-                            <div class="bg-primaryBlue p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F8F9FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <div class="bg-primaryRed p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3 step-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                                 </svg>
                                 <div class="font-medium text-secondaryGray md:text-center text-lg">
                                     Confidencialidade do processo
                                 </div>
                             </div>
-                            <div class="bg-primaryBlue p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F8F9FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <div class="bg-primaryRed p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3 step-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                                 </svg>
@@ -725,8 +879,8 @@
                                     Flexibilidade de procedimentos
                                 </div>
                             </div>
-                            <div class="bg-primaryBlue p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F8F9FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <div class="bg-primaryRed p-4 md:py-8 md:px-6 rounded-3xl flex md:flex-col items-center gap-3 step-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
                                     <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
                                     <line x1="12" y1="19" x2="12" y2="23"></line>
@@ -745,53 +899,53 @@
         <!-- Árbitros Section -->
         <section id="arbitros" class="py-16 px-4">
             <div class="w-container">
-                <h2 class="text-3xl md:text-4xl font-bold text-primaryBlue text-center mb-12">Corpo de Árbitros</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-primaryRed text-center mb-12">Corpo de Árbitros</h2>
                 <div class="textarea-content arbitragem mb-10">
-                    <p>No serviço de arbitragem da CRG contamos com um corpo de árbitros altamente qualificado e especializado, prontos para decidir uma resolução eficaz e justa para os conflitos. Cada um de nossos árbitros possui vasta experiência em suas áreas de atuação, garantindo que as disputas sejam tratadas com o máximo de conhecimento e imparcialidade.</p>
+                    <p>No serviço de arbitragem da CRPA contamos com um corpo de árbitros altamente qualificado e especializado, prontos para decidir uma resolução eficaz e justa para os conflitos. Cada um de nossos árbitros possui vasta experiência em suas áreas de atuação, garantindo que as disputas sejam tratadas com o máximo de conhecimento e imparcialidade.</p>
                     <p>Trabalhamos com profissionais que possuem expertise técnica, além de um profundo compromisso com a ética e a transparência.</p>
                 </div>
                 
                 <!-- Árbitros -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Árbitro 1 -->
-                    <div class="p-6 border border-solid border-themeBorder rounded-2xl flex flex-col items-center text-center">
-                        <div class="w-24 h-24 bg-primaryBlue rounded-full mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                    <div class="p-6 border border-solid border-themeBorder rounded-2xl flex flex-col items-center text-center step-card">
+                        <div class="w-24 h-24 bg-primaryRed rounded-full mb-4 flex items-center justify-center text-white text-2xl font-bold">
                             JS
                         </div>
-                        <h3 class="text-primaryBlue text-xl font-bold mb-2">Dr. João Silva</h3>
+                        <h3 class="text-primaryRed text-xl font-bold mb-2">Dr. João Silva</h3>
                         <p class="text-themeDark mb-4">Especialista em Direito Empresarial e Contratos</p>
-                        <button class="text-secondaryBlue font-semibold text-sm" data-modal-target="modal-1" data-modal-toggle="modal-1">
+                        <button class="text-secondaryRed font-semibold text-sm hover:text-primaryRed transition-colors duration-300" data-modal-target="modal-1" data-modal-toggle="modal-1">
                             Conheça +
                         </button>
                     </div>
                     
                     <!-- Árbitro 2 -->
-                    <div class="p-6 border border-solid border-themeBorder rounded-2xl flex flex-col items-center text-center">
-                        <div class="w-24 h-24 bg-primaryBlue rounded-full mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                    <div class="p-6 border border-solid border-themeBorder rounded-2xl flex flex-col items-center text-center step-card">
+                        <div class="w-24 h-24 bg-primaryRed rounded-full mb-4 flex items-center justify-center text-white text-2xl font-bold">
                             MS
                         </div>
-                        <h3 class="text-primaryBlue text-xl font-bold mb-2">Dra. Maria Santos</h3>
+                        <h3 class="text-primaryRed text-xl font-bold mb-2">Dra. Maria Santos</h3>
                         <p class="text-themeDark mb-4">Especialista em Direito Societário e Fusões</p>
-                        <button class="text-secondaryBlue font-semibold text-sm" data-modal-target="modal-2" data-modal-toggle="modal-2">
+                        <button class="text-secondaryRed font-semibold text-sm hover:text-primaryRed transition-colors duration-300" data-modal-target="modal-2" data-modal-toggle="modal-2">
                             Conheça +
                         </button>
                     </div>
                     
                     <!-- Árbitro 3 -->
-                    <div class="p-6 border border-solid border-themeBorder rounded-2xl flex flex-col items-center text-center">
-                        <div class="w-24 h-24 bg-primaryBlue rounded-full mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                    <div class="p-6 border border-solid border-themeBorder rounded-2xl flex flex-col items-center text-center step-card">
+                        <div class="w-24 h-24 bg-primaryRed rounded-full mb-4 flex items-center justify-center text-white text-2xl font-bold">
                             PO
                         </div>
-                        <h3 class="text-primaryBlue text-xl font-bold mb-2">Dr. Pedro Oliveira</h3>
+                        <h3 class="text-primaryRed text-xl font-bold mb-2">Dr. Pedro Oliveira</h3>
                         <p class="text-themeDark mb-4">Especialista em Direito Internacional</p>
-                        <button class="text-secondaryBlue font-semibold text-sm" data-modal-target="modal-3" data-modal-toggle="modal-3">
+                        <button class="text-secondaryRed font-semibold text-sm hover:text-primaryRed transition-colors duration-300" data-modal-target="modal-3" data-modal-toggle="modal-3">
                             Conheça +
                         </button>
                     </div>
                 </div>
                 
                 <div class="text-center mt-10">
-                    <a href="#contato" class="bg-secondaryBlue hover:bg-hoverBlue text-white font-semibold py-3 px-8 rounded-2xl transition duration-300">
+                    <a href="#contato" class="bg-secondaryRed hover:bg-hoverRed text-white font-semibold py-3 px-8 rounded-2xl transition duration-300 shadow-lg">
                         Entre em Contato
                     </a>
                 </div>
@@ -801,14 +955,14 @@
         <!-- Regulamento Section -->
         <section id="regulamento" class="py-16 px-4 bg-secondaryGray">
             <div class="w-container">
-                <h2 class="text-3xl md:text-4xl font-bold text-primaryBlue text-center mb-12">Regulamento</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-primaryRed text-center mb-12">Regulamento</h2>
                 <div class="textarea-content arbitragem mb-10">
-                    <p>Para ajudá-lo(a) a entender melhor o processo de arbitragem, disponibilizamos um material completo sobre o Regulamento de Arbitragem da CRG. Este documento contém informações detalhadas sobre as regras e procedimentos que regem a arbitragem, garantindo que você esteja bem informado ao optar por esse método de resolução de conflitos.</p>
+                    <p>Para ajudá-lo(a) a entender melhor o processo de arbitragem, disponibilizamos um material completo sobre o Regulamento de Arbitragem da CRPA. Este documento contém informações detalhadas sobre as regras e procedimentos que regem a arbitragem, garantindo que você esteja bem informado ao optar por esse método de resolução de conflitos.</p>
                 </div>
                 
-                <div class="bg-primaryBlue p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="bg-primaryRed p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
                     <div class="flex items-center gap-6 mb-6 md:mb-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F8F9FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F9FAFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                             <polyline points="14 2 14 8 20 8"></polyline>
                             <line x1="16" y1="13" x2="8" y1="13"></line>
@@ -819,7 +973,7 @@
                             Arquivo para Download
                         </h2>
                     </div>
-                    <button class="font-bold text-themeDark py-3 px-6 flex gap-2 bg-secondaryGray rounded-3xl items-center">
+                    <button class="font-bold text-themeDark py-3 px-6 flex gap-2 bg-secondaryGray rounded-3xl items-center hover:bg-gray-100 transition-colors duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
@@ -834,15 +988,15 @@
         <!-- Contato Section -->
         <section id="contato" class="py-16 px-4">
             <div class="w-container">
-                <h2 class="text-3xl md:text-4xl font-bold text-primaryBlue text-center mb-12">Entre em Contato</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-primaryRed text-center mb-12">Entre em Contato</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div>
-                        <h3 class="text-2xl font-semibold text-primaryBlue mb-6">Informações de Contato</h3>
+                        <h3 class="text-2xl font-semibold text-primaryRed mb-6">Informações de Contato</h3>
                         
                         <div class="space-y-4">
                             <div class="flex items-start">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
@@ -853,18 +1007,18 @@
                             </div>
                             
                             <div class="flex items-start">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1">
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                     <polyline points="22,6 12,13 2,6"></polyline>
                                 </svg>
                                 <div>
                                     <h4 class="font-semibold text-themeDark">Email</h4>
-                                    <p class="text-themeDark">contato@crg-arbitragem.com.br</p>
+                                    <p class="text-themeDark">contato@crpa-arbitragem.com.br</p>
                                 </div>
                             </div>
                             
                             <div class="flex items-start">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                                 </svg>
                                 <div>
@@ -881,36 +1035,36 @@
                     </div>
                     
                     <div>
-                        <h3 class="text-2xl font-semibold text-primaryBlue mb-6">Envie uma Mensagem</h3>
+                        <h3 class="text-2xl font-semibold text-primaryRed mb-6">Envie uma Mensagem</h3>
                         
                         <form class="space-y-4">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <label for="nome" class="block text-sm font-medium text-themeDark mb-1">Nome *</label>
-                                    <input type="text" id="nome" name="nome" required class="w-full px-4 py-2 border border-themeBorder rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondaryBlue">
+                                    <input type="text" id="nome" name="nome" required class="w-full px-4 py-2 border border-themeBorder rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondaryRed">
                                 </div>
                                 <div>
                                     <label for="sobrenome" class="block text-sm font-medium text-themeDark mb-1">Sobrenome *</label>
-                                    <input type="text" id="sobrenome" name="sobrenome" required class="w-full px-4 py-2 border border-themeBorder rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondaryBlue">
+                                    <input type="text" id="sobrenome" name="sobrenome" required class="w-full px-4 py-2 border border-themeBorder rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondaryRed">
                                 </div>
                             </div>
                             
                             <div>
                                 <label for="email" class="block text-sm font-medium text-themeDark mb-1">Email *</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-themeBorder rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondaryBlue">
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-themeBorder rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondaryRed">
                             </div>
                             
                             <div>
                                 <label for="telefone" class="block text-sm font-medium text-themeDark mb-1">Telefone</label>
-                                <input type="tel" id="telefone" name="telefone" class="w-full px-4 py-2 border border-themeBorder rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondaryBlue">
+                                <input type="tel" id="telefone" name="telefone" class="w-full px-4 py-2 border border-themeBorder rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondaryRed">
                             </div>
                             
                             <div>
                                 <label for="mensagem" class="block text-sm font-medium text-themeDark mb-1">Mensagem *</label>
-                                <textarea id="mensagem" name="mensagem" rows="4" required class="w-full px-4 py-2 border border-themeBorder rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondaryBlue"></textarea>
+                                <textarea id="mensagem" name="mensagem" rows="4" required class="w-full px-4 py-2 border border-themeBorder rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondaryRed"></textarea>
                             </div>
                             
-                            <button type="submit" class="bg-secondaryBlue hover:bg-hoverBlue text-white font-semibold py-3 px-8 rounded-2xl transition duration-300 w-full">
+                            <button type="submit" class="bg-secondaryRed hover:bg-hoverRed text-white font-semibold py-3 px-8 rounded-2xl transition duration-300 w-full shadow-lg">
                                 Enviar Mensagem
                             </button>
                         </form>
@@ -921,12 +1075,12 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primaryBlue py-12 px-4 text-white">
+    <footer class="bg-primaryRed py-12 px-4 text-white">
         <div class="w-container">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">CRG</h3>
-                    <p class="text-secondaryGray">Câmara de Resolução Global - Especializada em Arbitragem para resolução eficiente de conflitos.</p>
+                    <h3 class="text-xl font-bold mb-4">CRPA</h3>
+                    <p class="text-secondaryGray">Câmara de Resolução por Arbitragem - Especializada em Arbitragem para resolução eficiente de conflitos.</p>
                 </div>
                 
                 <div>
@@ -953,20 +1107,20 @@
                     <h4 class="font-semibold mb-4">Contato</h4>
                     <ul class="space-y-2 text-secondaryGray">
                         <li>Av. Paulista, 1000 - São Paulo/SP</li>
-                        <li>contato@crg-arbitragem.com.br</li>
+                        <li>contato@crpa-arbitragem.com.br</li>
                         <li>(11) 1234-5678</li>
                     </ul>
                 </div>
             </div>
             
-            <div class="pt-8 border-t border-secondaryBlue text-center text-secondaryGray">
-                <p>&copy; 2023 Câmara de Resolução Global - CRG. Todos os direitos reservados.</p>
+            <div class="pt-8 border-t border-secondaryRed text-center text-secondaryGray">
+                <p>&copy; 2023 Câmara de Resolução por Arbitragem - CRPA. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Botão Flutuante -->
-    <button class="fixed bottom-6 right-6 bg-secondaryBlue text-white p-4 rounded-full hover:bg-hoverBlue z-50 shadow-lg" onclick="scrollToContactForm()">
+    <button class="fixed bottom-6 right-6 bg-secondaryRed text-white p-4 rounded-full hover:bg-hoverRed z-50 shadow-lg transition-colors duration-300" onclick="scrollToContactForm()">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
         </svg>
@@ -997,10 +1151,10 @@
             <!-- Modal Body -->
             <div class="px-4 pt-4 pb-6 flex flex-col items-start gap-4">
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-primaryBlue rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div class="w-10 h-10 bg-primaryRed rounded-full flex items-center justify-center text-white text-sm font-bold">
                         JS
                     </div>
-                    <h3 class="text-lg font-bold text-primaryBlue">
+                    <h3 class="text-lg font-bold text-primaryRed">
                         Dr. João Silva
                     </h3>
                 </div>
@@ -1038,10 +1192,10 @@
             <!-- Modal Body -->
             <div class="px-4 pt-4 pb-6 flex flex-col items-start gap-4">
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-primaryBlue rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div class="w-10 h-10 bg-primaryRed rounded-full flex items-center justify-center text-white text-sm font-bold">
                         MS
                     </div>
-                    <h3 class="text-lg font-bold text-primaryBlue">
+                    <h3 class="text-lg font-bold text-primaryRed">
                         Dra. Maria Santos
                     </h3>
                 </div>
@@ -1079,10 +1233,10 @@
             <!-- Modal Body -->
             <div class="px-4 pt-4 pb-6 flex flex-col items-start gap-4">
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-primaryBlue rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div class="w-10 h-10 bg-primaryRed rounded-full flex items-center justify-center text-white text-sm font-bold">
                         PO
                     </div>
-                    <h3 class="text-lg font-bold text-primaryBlue">
+                    <h3 class="text-lg font-bold text-primaryRed">
                         Dr. Pedro Oliveira
                     </h3>
                 </div>
@@ -1183,29 +1337,52 @@
                     return;
                 }
                 
-                // Simulação de cálculo (substituir por lógica real)
+                // Cálculo baseado na nova tabela fornecida
                 let taxaRegistro, taxaAdministracao, valorArbitro;
+                const salarioMinimo = 1412.00; // Valor do salário mínimo atual
                 
-                if (valor <= 150000) {
-                    taxaRegistro = valor * 0.01;
-                    taxaAdministracao = 4200;
-                    valorArbitro = 4000;
-                } else if (valor <= 500000) {
-                    taxaRegistro = 3000;
-                    taxaAdministracao = 6900;
-                    valorArbitro = 10250;
-                } else if (valor <= 1000000) {
-                    taxaRegistro = 4500;
-                    taxaAdministracao = 10200;
-                    valorArbitro = 17500;
-                } else if (valor <= 5000000) {
-                    taxaRegistro = 5500;
-                    taxaAdministracao = 21000;
-                    valorArbitro = 22750;
+                // Verificar se se enquadra no termo de gratuidade administrativa
+                const termoGratuidade = valor < 8000;
+                
+                if (termoGratuidade) {
+                    // Termo de Gratuidade Administrativa
+                    taxaRegistro = valor * 0.01; // 1% do valor da demanda
+                    taxaAdministracao = 0; // Isenta
+                    valorArbitro = 500; // Valor fixo para o árbitro
                 } else {
-                    taxaRegistro = 5500;
-                    taxaAdministracao = 41460;
-                    valorArbitro = 43250;
+                    // Cálculo normal conforme a tabela
+                    if (valor <= 150000) {
+                        taxaRegistro = valor * 0.01; // 1% do valor da demanda
+                        taxaAdministracao = salarioMinimo * 1; // 1 salário mínimo
+                        valorArbitro = 4000;
+                    } else if (valor <= 500000) {
+                        taxaRegistro = 4000;
+                        if (valor <= 300000) {
+                            taxaAdministracao = salarioMinimo * 3; // 3 salários mínimos
+                        } else {
+                            taxaAdministracao = salarioMinimo * 5; // 5 salários mínimos
+                        }
+                        valorArbitro = 6250;
+                    } else if (valor <= 1000000) {
+                        taxaRegistro = 5500;
+                        taxaAdministracao = salarioMinimo * 8; // 8 salários mínimos
+                        valorArbitro = 12500;
+                    } else if (valor <= 5000000) {
+                        taxaRegistro = 6500;
+                        taxaAdministracao = salarioMinimo * 10; // 10 salários mínimos
+                        valorArbitro = 18750;
+                    } else if (valor <= 10000000) {
+                        taxaRegistro = 6500;
+                        taxaAdministracao = salarioMinimo * 12; // 12 salários mínimos
+                        valorArbitro = 25250;
+                    } else {
+                        // Para valores acima de 10.000.000,01
+                        taxaRegistro = 6500;
+                        // Taxa de administração será definida pelo Diretor Técnico
+                        // Usaremos um valor estimado baseado na progressão
+                        taxaAdministracao = salarioMinimo * 15; // Estimativa
+                        valorArbitro = 35000; // Estimativa
+                    }
                 }
                 
                 // Formatação de valores como moeda
@@ -1215,16 +1392,58 @@
                 
                 // Preenchendo os valores para Árbitro Único
                 document.getElementById('arbitro-taxa-registro').textContent = formatarMoeda(taxaRegistro);
-                document.getElementById('arbitro-taxa-administracao').textContent = formatarMoeda(taxaAdministracao);
+                document.getElementById('arbitro-taxa-administracao').textContent = termoGratuidade ? "Isenta*" : formatarMoeda(taxaAdministracao);
                 document.getElementById('arbitro-valor-arbitro').textContent = formatarMoeda(valorArbitro);
-                document.getElementById('arbitro-total').textContent = formatarMoeda(taxaRegistro + taxaAdministracao + valorArbitro);
+                document.getElementById('arbitro-total').textContent = formatarMoeda(taxaRegistro + (termoGratuidade ? 0 : taxaAdministracao) + valorArbitro);
                 
                 // Preenchendo os valores para Tribunal Arbitral
                 document.getElementById('tribunal-taxa-registro').textContent = formatarMoeda(taxaRegistro);
-                document.getElementById('tribunal-taxa-administracao').textContent = formatarMoeda(taxaAdministracao);
+                document.getElementById('tribunal-taxa-administracao').textContent = termoGratuidade ? "Isenta*" : formatarMoeda(taxaAdministracao);
                 document.getElementById('tribunal-valor-arbitro').textContent = formatarMoeda(valorArbitro * 3);
-                document.getElementById('tribunal-total').textContent = formatarMoeda(taxaRegistro + taxaAdministracao + (valorArbitro * 3));
+                document.getElementById('tribunal-total').textContent = formatarMoeda(taxaRegistro + (termoGratuidade ? 0 : taxaAdministracao) + (valorArbitro * 3));
+                
+                // Mostrar informações sobre taxas
+                const taxasInfo = document.getElementById('taxas-info');
+                taxasInfo.classList.add('expanded');
+                
+                // Rolar para as informações de taxas
+                setTimeout(() => {
+                    taxasInfo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 500);
+                
+                // Exibir mensagem informativa sobre o termo de gratuidade
+                if (termoGratuidade) {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Termo de Gratuidade Administrativa',
+                        html: `Para valores abaixo de R$ 8.000,00, você pode solicitar o <strong>Termo de Gratuidade Administrativa</strong>.<br><br>
+                               Neste caso, você pagará apenas:<br>
+                               • Taxa de Registro: ${formatarMoeda(taxaRegistro)}<br>
+                               • Honorários do Árbitro: ${formatarMoeda(valorArbitro)}<br>
+                               • Taxa de Administração: <strong>Isenta</strong>`,
+                        confirmButtonText: 'Entendi',
+                        customClass: {
+                            confirmButton: 'custom-ok-button'
+                        }
+                    });
+                }
             });
+            
+            // Toggle para expandir/recolher informações sobre taxas
+            const taxasToggle = document.getElementById('taxas-toggle');
+            const taxasContent = document.getElementById('taxas-content');
+            const taxasArrow = document.getElementById('taxas-arrow');
+            
+            if (taxasToggle) {
+                taxasToggle.addEventListener('click', function() {
+                    const taxasInfo = document.getElementById('taxas-info');
+                    taxasInfo.classList.toggle('expanded');
+                    
+                    if (taxasArrow) {
+                        taxasArrow.classList.toggle('rotate-180');
+                    }
+                });
+            }
         });
         
         // Formatação automática do campo de valor
