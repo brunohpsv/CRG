@@ -9,12 +9,12 @@
             --gold-primary: #FFD700;
             --gold-dark: #D4AF37;
             --gold-light: #FFEC8B;
-            --text-dark: #333333;
-            --text-light: #FFFFFF;
-            --bg-white: #FFFFFF;
+            --text-dark: #333;
+            --text-light: #FFF;
+            --bg-white: #FFF;
             --bg-gray: #F5F5F5;
-            --border-gray: #DDDDDD;
-            --link-color: #0066CC;
+            --border-gray: #DDD;
+            --link-color: #06C;
         }
         
         * {
@@ -31,12 +31,11 @@
         }
         
         .container {
-            max-width: 1400px; /* Aumentado de 1200px */
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 15px;
         }
         
-        /* Header Styles - IDÊNTICO à imagem */
         .gov-header {
             background-color: var(--bg-white);
             border-bottom: 1px solid var(--border-gray);
@@ -54,8 +53,10 @@
             align-items: center;
         }
         
-        .logo-sp img {
-            height: 35px;
+        .logo-sp div:first-child {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--gold-dark);
         }
         
         .header-title {
@@ -71,7 +72,7 @@
             align-items: center;
         }
         
-        .btn-accessibility {
+        .header-actions button {
             background: none;
             border: none;
             cursor: pointer;
@@ -80,21 +81,11 @@
             color: var(--text-dark);
         }
         
-        .btn-contrast {
-            background: none;
-            border: none;
-            cursor: pointer;
-            margin-right: 12px;
-            font-size: 13px;
-            color: var(--text-dark);
-        }
-        
-        /* Main Content - Layout de duas colunas com largura maior */
         .main-content {
             display: flex;
             gap: 20px;
             margin: 15px auto;
-            max-width: 1400px; /* Aumentado de 1200px */
+            max-width: 1400px;
         }
         
         .info-section {
@@ -126,34 +117,27 @@
             font-weight: 600;
         }
         
-        /* Seção de informações - IDÊNTICA à imagem */
         .info-section h2 {
             font-size: 18px;
             font-weight: 600;
-            margin-bottom: 10px; /* Reduzido de 12px */
-            color: var(--text-dark);
+            margin-bottom: 10px;
         }
         
-        .info-section p {
-            margin-bottom: 10px; /* Reduzido de 12px */
+        .info-section p, .benefits-list li {
+            margin-bottom: 10px;
             font-size: 15px;
         }
         
         .benefits-list {
             margin-left: 18px;
-            margin-bottom: 12px; /* Reduzido de 15px */
-        }
-        
-        .benefits-list li {
-            margin-bottom: 5px; /* Reduzido de 6px */
-            font-size: 15px;
+            margin-bottom: 12px;
         }
         
         .highlight-box {
             background-color: var(--bg-gray);
             border-left: 4px solid var(--gold-primary);
             padding: 12px;
-            margin: 12px 0; /* Reduzido de 15px */
+            margin: 12px 0;
             font-size: 15px;
         }
         
@@ -166,23 +150,21 @@
             text-decoration: underline;
         }
         
-        /* Seção de acesso - IDÊNTICA à imagem */
         .greeting {
             font-size: 16px;
             font-weight: 600;
-            margin-bottom: 12px; /* Reduzido de 15px */
-            color: var(--text-dark);
+            margin-bottom: 12px;
         }
         
         .profile-options {
-            margin-bottom: 15px; /* Reduzido de 20px */
+            margin-bottom: 15px;
         }
         
         .profile-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px; /* Reduzido de 12px */
+            padding: 10px;
             border-bottom: 1px solid var(--border-gray);
             cursor: pointer;
             transition: background-color 0.2s;
@@ -200,7 +182,7 @@
         .profile-desc {
             font-size: 13px;
             color: #666;
-            margin-top: 2px; /* Reduzido de 3px */
+            margin-top: 2px;
         }
         
         .profile-arrow {
@@ -213,22 +195,20 @@
             color: #666;
         }
         
-        /* Seção de links - IDÊNTICA à imagem */
         .links-section {
-            margin-top: 15px; /* Reduzido de 20px */
+            margin-top: 15px;
         }
         
         .links-title {
             font-size: 16px;
             font-weight: 600;
-            margin-bottom: 10px; /* Reduzido de 12px */
-            color: var(--text-dark);
+            margin-bottom: 10px;
         }
         
         .links-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px; /* Reduzido de 12px */
+            gap: 10px;
         }
         
         .link-item {
@@ -249,18 +229,17 @@
             font-size: smaller;
         }
         
-        /* Footer - IDÊNTICO à imagem */
         .gov-footer {
             background-color: var(--bg-white);
             border-top: 1px solid var(--border-gray);
-            padding: 12px 0; /* Reduzido de 15px */
-            margin-top: 15px; /* Reduzido de 20px */
+            padding: 12px 0;
+            margin-top: 15px;
         }
         
         .footer-links {
             display: flex;
             justify-content: center;
-            margin-bottom: 8px; /* Reduzido de 10px */
+            margin-bottom: 8px;
         }
         
         .footer-links a {
@@ -280,7 +259,6 @@
             color: #666;
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .main-content {
                 flex-direction: column;
@@ -313,12 +291,10 @@
     </style>
 </head>
 <body>
-    <!-- Header - IDÊNTICO à imagem -->
     <header class="gov-header">
         <div class="container">
             <div class="logo-sp">
-                <!-- Logo do governo substituído pela logo IMPETRA -->
-                <div style="font-size: 22px; font-weight: bold; color: var(--gold-dark);">IMPETRA</div>
+                <div>IMPETRA</div>
                 <div class="header-title">Clube de Benefícios Exclusivos</div>
             </div>
             <div class="header-actions">
@@ -328,10 +304,8 @@
         </div>
     </header>
 
-    <!-- Main Content - Layout de duas colunas -->
     <div class="container">
         <div class="main-content">
-            <!-- Seção de informações sobre a IMPETRA (ESQUERDA) -->
             <div class="info-section">
                 <div class="content-header">
                     <h1>Você sabe o que é o IMPETRA?</h1>
@@ -359,7 +333,6 @@
                     Precisa de ajuda? <a href="#">Clique aqui</a>
                 </div>
                 
-                <!-- Seção de links - IDÊNTICA à imagem -->
                 <div class="links-section">
                     <div class="links-grid">
                         <div>
@@ -374,7 +347,6 @@
                 </div>
             </div>
             
-            <!-- Seção de acesso (DIREITA) -->
             <div class="access-section">
                 <div class="greeting">
                     Olá, novamente!<br>
@@ -383,7 +355,6 @@
                 
                 <p>Escolha abaixo um perfil para acessar.</p>
                 
-                <!-- Seção de perfis - IDÊNTICA à imagem -->
                 <div class="profile-options">
                     <div class="profile-item">
                         <div>
@@ -413,7 +384,6 @@
         </div>
     </div>
 
-    <!-- Footer - IDÊNTICO à imagem -->
     <footer class="gov-footer">
         <div class="container">
             <div class="footer-links">
@@ -429,24 +399,19 @@
     </footer>
 
     <script>
-        // Adicionando interatividade aos itens de perfil
         document.querySelectorAll('.profile-item').forEach(item => {
             item.addEventListener('click', function() {
-                // Remove a seleção de todos os itens
                 document.querySelectorAll('.profile-item').forEach(i => {
                     i.style.backgroundColor = '';
                 });
                 
-                // Adiciona a seleção ao item clicado
                 this.style.backgroundColor = 'var(--bg-gray)';
                 
-                // Simula o redirecionamento (substitua pela lógica real)
                 const profileName = this.querySelector('.profile-name').textContent;
                 alert(`Redirecionando para o perfil: ${profileName}`);
             });
         });
         
-        // Simulando funcionalidade do botão de alto contraste
         document.querySelector('.btn-contrast').addEventListener('click', function() {
             document.body.classList.toggle('high-contrast');
             if (document.body.classList.contains('high-contrast')) {
