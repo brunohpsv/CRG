@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMPETRA - Clube de Benefícios Exclusivos</title>
@@ -90,20 +89,36 @@
             color: var(--text-dark);
         }
         
-        /* Main Content - IDÊNTICO à imagem */
+        /* Main Content - Layout de duas colunas */
         .main-content {
-            background-color: var(--bg-white);
+            display: flex;
+            gap: 30px;
             margin: 20px auto;
+            max-width: 1200px;
+        }
+        
+        .info-section {
+            flex: 1;
+            background-color: var(--bg-white);
             border-radius: 4px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            max-width: 800px;
-            overflow: hidden;
+            padding: 30px;
+        }
+        
+        .access-section {
+            width: 350px;
+            background-color: var(--bg-white);
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 30px;
         }
         
         .content-header {
             background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
             color: var(--text-dark);
             padding: 20px;
+            border-radius: 4px 4px 0 0;
+            margin: -30px -30px 20px -30px;
         }
         
         .content-header h1 {
@@ -111,15 +126,7 @@
             font-weight: 600;
         }
         
-        .content-body {
-            padding: 30px;
-        }
-        
         /* Seção de informações - IDÊNTICA à imagem */
-        .info-section {
-            margin-bottom: 30px;
-        }
-        
         .info-section h2 {
             font-size: 20px;
             font-weight: 600;
@@ -159,13 +166,7 @@
             text-decoration: underline;
         }
         
-        .divider {
-            height: 1px;
-            background-color: var(--border-gray);
-            margin: 25px 0;
-        }
-        
-        /* Seção de saudação - IDÊNTICA à imagem */
+        /* Seção de acesso - IDÊNTICA à imagem */
         .greeting {
             font-size: 18px;
             font-weight: 600;
@@ -173,7 +174,6 @@
             color: var(--text-dark);
         }
         
-        /* Seção de perfis - IDÊNTICA à imagem */
         .profile-options {
             margin-bottom: 30px;
         }
@@ -282,6 +282,14 @@
         
         /* Responsive */
         @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .access-section {
+                width: 100%;
+            }
+            
             .gov-header .container {
                 flex-direction: column;
                 align-items: flex-start;
@@ -320,14 +328,15 @@
         </div>
     </header>
 
-    <!-- Main Content - IDÊNTICO à imagem -->
-    <main class="main-content">
-        <div class="content-header">
-            <h1>Você sabe o que é o IMPETRA?</h1>
-        </div>
-        <div class="content-body">
-            <!-- Seção de informações - IDÊNTICA à imagem -->
+    <!-- Main Content - Layout de duas colunas -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Seção de informações sobre a IMPETRA (ESQUERDA) -->
             <div class="info-section">
+                <div class="content-header">
+                    <h1>Você sabe o que é o IMPETRA?</h1>
+                </div>
+                
                 <p>O <strong>IMPETRA</strong> nasceu para transformar a experiência de consumo e lazer, conectando membros com benefícios exclusivos que simplificam e enriquecem o <strong>estilo de vida</strong>.</p>
                 
                 <h2>Benefícios para os membros:</h2>
@@ -349,62 +358,60 @@
                     1. Acesso gratuito com atenção de dados móveis: navegue sem consumir o plano de dados graças à escolha de perfil<br>
                     Precisa de ajuda? <a href="#">Clique aqui</a>
                 </div>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <!-- Seção de saudação - IDÊNTICA à imagem -->
-            <div class="greeting">
-                Olá, novamente!<br>
-                Já estávamos sentindo sua falta.
-            </div>
-            
-            <p>Escolha abaixo um perfil para acessar.</p>
-            
-            <!-- Seção de perfis - IDÊNTICA à imagem -->
-            <div class="profile-options">
-                <div class="profile-item">
-                    <div>
-                        <div class="profile-name">Sou Membro</div>
-                        <div class="profile-desc">Acesso completo aos benefícios do clube</div>
+                
+                <!-- Seção de links - IDÊNTICA à imagem -->
+                <div class="links-section">
+                    <div class="links-grid">
+                        <div>
+                            <div class="links-title">Sites do IMPETRA</div>
+                            <div class="link-item">Portal de Benefícios<span class="link-sup">⁰</span> • Clube de Viagens<span class="link-sup">⁰</span> • Intranet<span class="link-sup">⁰</span> • Portal Filantrópico<span class="link-sup">⁰</span></div>
+                        </div>
+                        <div>
+                            <div class="links-title">Links Úteis</div>
+                            <div class="link-item">Cadastro de Membro<span class="link-sup">⁰</span> • Consulta de Benefícios<span class="link-sup">⁰</span> • Escola Online<span class="link-sup">⁰</span> • Base de Conhecimento<span class="link-sup">⁰</span></div>
+                        </div>
                     </div>
-                    <div class="profile-arrow">→</div>
+                </div>
+            </div>
+            
+            <!-- Seção de acesso (DIREITA) -->
+            <div class="access-section">
+                <div class="greeting">
+                    Olá, novamente!<br>
+                    Já estávamos sentindo sua falta.
                 </div>
                 
-                <div class="profile-item">
-                    <div>
-                        <div class="profile-name">Sou Parceiro</div>
-                        <div class="profile-gov">acesso via <strong>GOV.BR</strong></div>
-                    </div>
-                    <div class="profile-arrow">→</div>
-                </div>
+                <p>Escolha abaixo um perfil para acessar.</p>
                 
-                <div class="profile-item">
-                    <div>
-                        <div class="profile-name">Sou Convidado</div>
-                        <div class="profile-desc">Acesso limitado para conhecer o clube</div>
+                <!-- Seção de perfis - IDÊNTICA à imagem -->
+                <div class="profile-options">
+                    <div class="profile-item">
+                        <div>
+                            <div class="profile-name">Sou Membro</div>
+                            <div class="profile-desc">Acesso completo aos benefícios do clube</div>
+                        </div>
+                        <div class="profile-arrow">→</div>
                     </div>
-                    <div class="profile-arrow">→</div>
-                </div>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <!-- Seção de links - IDÊNTICA à imagem -->
-            <div class="links-section">
-                <div class="links-grid">
-                    <div>
-                        <div class="links-title">Sites do IMPETRA</div>
-                        <div class="link-item">Portal de Benefícios<span class="link-sup">⁰</span> • Clube de Viagens<span class="link-sup">⁰</span> • Intranet<span class="link-sup">⁰</span> • Portal Filantrópico<span class="link-sup">⁰</span></div>
+                    
+                    <div class="profile-item">
+                        <div>
+                            <div class="profile-name">Sou Parceiro</div>
+                            <div class="profile-gov">acesso via <strong>GOV.BR</strong></div>
+                        </div>
+                        <div class="profile-arrow">→</div>
                     </div>
-                    <div>
-                        <div class="links-title">Links Úteis</div>
-                        <div class="link-item">Cadastro de Membro<span class="link-sup">⁰</span> • Consulta de Benefícios<span class="link-sup">⁰</span> • Escola Online<span class="link-sup">⁰</span> • Base de Conhecimento<span class="link-sup">⁰</span></div>
+                    
+                    <div class="profile-item">
+                        <div>
+                            <div class="profile-name">Sou Convidado</div>
+                            <div class="profile-desc">Acesso limitado para conhecer o clube</div>
+                        </div>
+                        <div class="profile-arrow">→</div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 
     <!-- Footer - IDÊNTICO à imagem -->
     <footer class="gov-footer">
@@ -445,11 +452,15 @@
             if (document.body.classList.contains('high-contrast')) {
                 document.body.style.backgroundColor = '#000';
                 document.body.style.color = '#FFF';
-                document.querySelector('.main-content').style.backgroundColor = '#333';
+                document.querySelectorAll('.info-section, .access-section').forEach(section => {
+                    section.style.backgroundColor = '#333';
+                });
             } else {
                 document.body.style.backgroundColor = '';
                 document.body.style.color = '';
-                document.querySelector('.main-content').style.backgroundColor = '';
+                document.querySelectorAll('.info-section, .access-section').forEach(section => {
+                    section.style.backgroundColor = '';
+                });
             }
         });
     </script>
